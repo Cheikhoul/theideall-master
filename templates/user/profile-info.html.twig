@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<div class="breadcrumbs">
+    <p id="fil-ariane">Mon profil > Mes informations</p>
+    <hr id="user-creation-line">
+</div>
+
+<div id="user-profile-navigation">
+    <div>
+        <img id="profile-picture" src="{{ asset('build/images/profilePic.png') }}"\>
+        <span id="profile-nametag">{{user.firstname ~ ' ' ~ user.lastname}}</span>
+    </div>
+    <div id="user-profile-tabs">
+        <a href="{{ path('user-profile-info')}}"><img id="myInfoSelected" src="{{ asset('build/images/MesInformationsSelected.png') }}"></a>
+        <a href="{{ path('user-profile-invoice')}}"><img id="myInvoices" src="{{ asset('build/images/MesFactures.png') }}"></a>
+    </div>
+</div>
+<div>
+    <form id="form-edit-user" action="{{path('user-edit')}}" method="post">
+        <span id="coordinates-title">Mes coordonnées personnelles</span>
+        <section class="row">
+            <input type="text" id="edit-mail" name="_email" value="{{user.email}}" autocomplete="off" tabindex="1" value size="25"/>
+        </section>
+        <section class="row">
+            <input type="text" id="edit-phoneNumber" name="_phoneNumber" value="{{user.phonenumber}}" autocomplete="off" tabindex="2" value size="25"/>
+        </section>
+        <section class="row">
+            <input type="text" id="edit-address" name="_address" value="{{user.address}}" autocomplete="off" tabindex="3" value size="25"/>
+        </section>
+        <span id="password-title">Mon mot de passe</span>
+        <section class="row">
+            <input type="password" id="edit-oldPassword" name="_oldPassword" value="" autocomplete="off" tabindex="4" value size="25" placeholder="Ancien mot de passe"/>
+        </section>
+        <section class="row">
+            <input type="password" id="edit-newPassword" name="_newPassword" value="" autocomplete="off" tabindex="5" value size="25" placeholder="Nouveau mot de passe"/>
+        </section>
+        <section class="row">
+            <input type="password" id="edit-confirmNewPassword" name="_confirmNewPassword" value="" autocomplete="off" tabindex="6" value size="25" placeholder="Confirmer nouveau mot de passe"/>
+        </section>
+        <section class="row btn-row">
+            <input classs="btn-submit" type="submit" id="modification" name="edit" value="Confirmer les modifications" tabindex="7"/>
+        </section>
+    </form>
+</div>
+<script>
+var password = document.getElementById("edit-newPassword")
+  , confirm_password = document.getElementById("confirmNewpassword");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Les mots de passe ne sont pas identiques");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;</script>
+{% endblock %}
+
+{% block javascripts %} {{ parent() }} {% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+    <div>
+        <p id="user-creation-text">Créer un utilisateur</p>
+        <hr id="user-creation-line">
+    </div>
+
+    <div id="user-creation-form">
+        {{ form_start(form) }}
+        {{ form_widget(form.firstname,{ 'attr': {'class': 'FormFirstname', 'required':'required'} }) }}
+        <span id="placeholderFirstName">Prénom <span class="asterisk">*</span></span>
+        {{ form_widget(form.lastname,{ 'attr': {'class': 'FormLastname','required':'required'}}) }}
+        <span id="placeholderLastName">Nom <span class="asterisk">*</span></span>
+        {{ form_widget(form.email, { 'attr': {'class': 'FormMail', 'required':'required'} }) }}
+        <span id="placeholderMail">Courriel <span class="asterisk">*</span></span>
+        {{ form_widget(form.password.first,{ 'attr': {'class':'FormPassword1', 'required':'required'} }) }}
+        <span id="placeholderPassword1">Mot de passe <span class="asterisk">*</span></span>
+        {{ form_widget(form.password.second, {'attr': {'class':'FormPassword2', 'required':'required'}}) }}
+        <span id="placeholderPassword2">Confirmez votre mot de passe <span class="asterisk">*</span></span>
+        {{ form_widget(form.phonenumber,{ 'attr': {'class': 'FormPhone', 'placeholder':'Numéro de téléphone'} }) }}
+        {{ form_widget(form.address,{ 'attr': {'class': 'FormAddress'} }) }}
+        <span id="placeholderAddress">Adresse</span>
+        {{ form_widget(form.bilingual, { 'attr': {'class': 'FormBilingual', 'required':'required'}}) }}
+        <span id="placeholderBilingual">Langue <span class="asterisk">*</span></span>
+        {{ form_widget(form.roles,{ 'attr': {'class': 'FormRole'}}) }}
+        <span id="placeholderRole">Rôle </span>
+        {{ form_widget(form.activityType,{ 'attr': {'class': 'FormActivityType'} }) }}
+        <span id="placeholderActivityType">Type d'activité</span>
+        {{ form_widget(form.teamName,{ 'attr': {'class': 'FormTeam', 'placeholder':'Équipe'} }) }}
+        <button class="FormAddUser"> {{ button_label|default('Ajouter utilisateur')}} </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

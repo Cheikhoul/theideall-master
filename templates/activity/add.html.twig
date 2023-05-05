@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+   {{ form_start(form) }}
+        {{ form_widget(form.name,{ 'attr': {'class': ''} }) }}
+        <span id="placeholderName">Nom</span>
+        {{ form_widget(form.description,{ 'attr': {'class': ''}}) }}
+        <span id="placeholderDescription">Description</span>
+        {{ form_widget(form.activityType,{ 'attr': {'class': ''} }) }}
+        <span id="placeholderActivityType">Type d'activité</span>
+        <button class="FormAddActivity"> {{ button_label|default('Ajouter l\'activité')}} </button>
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+{% block javascripts %} {{ parent() }} {% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<div class="breadcrumbs">
+    <p id="fil-ariane">Mon profil > Mes informations</p>
+    <hr id="user-creation-line">
+</div>
+
+<div id="user-profile-navigation">
+    <div>
+        <img id="profile-picture" src="{{ asset('build/images/profilePic.png') }}"\>
+        <span id="profile-nametag">{{user.firstname ~ ' ' ~ user.lastname}}</span>
+    </div>
+    <div id="user-profile-tabs">
+        <a href="{{ path('user-profile-info')}}"><img id="myInfo" src="{{ asset('build/images/MesInformations.png') }}"></a>
+        <a href="{{ path('user-profile-invoice')}}"><img id="myInvoicesSelected" src="{{ asset('build/images/MesFacturesSelected.png') }}"></a>
+    </div>
+</div>
+<div id="user-profile-invoices">
+    
+</div>
+    
+{% endblock %}
+
+{% block javascripts %} {{ parent() }} {% endblock %}

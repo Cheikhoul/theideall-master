@@ -1,0 +1,1430 @@
+body {
+    background-color: white;
+    position: relative;
+    background: #FFFFFF;
+}
+/* Style de la page Login */
+#login-logo {
+    position: absolute;
+    width: 256px;
+    height: 150px;
+    left: 455px;
+    top: 20px;
+}
+
+#login-content{
+    position: absolute;
+    left: 27.57%;
+    right: 27.57%;
+    width: 500px;
+    height: 300px;
+    top: 179px;
+    
+    background: #F4F4F4;
+    border: 1px solid rgba(244, 244, 244, 0.35);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#username {
+    position: absolute;
+    left: 8%;
+    right: 8.9%;
+    top: 20%;
+    bottom: 63%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(244, 244, 244, 0.35);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#idEmail {
+    position: absolute;
+    left: 8%;
+    right: 62.99%;
+    top: 10%;
+    bottom: 59.53%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #141414;
+}
+
+#idMdp {
+    position: absolute;
+    left: 8%;
+    top: 45%;
+    bottom: 47.48%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #141414;
+}
+
+#password {
+    position: absolute;
+    left: 8%;
+    right: 8.9%;
+    top: 55%;
+    bottom: 28%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(244, 244, 244, 0.35);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+}
+
+#remember_me {
+    position: absolute;
+    width: 256px;
+    height: 150px;
+    left: 50px;
+    top: 225px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #141414;
+}
+
+#connexion {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    position: absolute;
+    width: 100px;
+    height: 38px;
+    left: 330px;
+    top: 225px;
+    background: #ffbc40;
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+#forgotten_password {
+    position: absolute;
+    width: 157px;
+    height: 20px;
+    left: 35px;
+    top: 305px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3d3d3d;
+}
+
+/* Style du header */
+#header-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0.61%;
+    width: auto;
+    height: 120px;
+    background: rgba(17, 50, 130, 0.9);
+    border-radius: 0px 0px 20px 20px;
+}
+
+#header-logo {
+    position: absolute;
+    left: 2%;
+    right: 8%;
+    top: 19%;
+    bottom: 20%;
+    width: 120px;
+}
+
+#nav1 {
+    position: absolute;
+    left: 88%;
+    right: 6%;
+    top: 41%;
+    bottom: 45.4%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+#nav2 {
+    position: absolute;
+    left: 95%;
+    right: 2%;
+    top: 39%;
+    bottom: 44%;
+    width: 23px;
+}
+
+#nav3 {
+    position: absolute;
+    left: 31.04%;
+    right: 64.69%;
+    top: 79%;
+    bottom: 1%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+#nav4 {
+    position: absolute;
+    left: 37.01%;
+    right: 55.14%;
+    top: 79%;
+    bottom: 1%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+#nav5 {
+    position: absolute;
+    left: 46.6%;
+    right: 45.97%;
+    top: 79%;
+    bottom: 1%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+#nav6 {
+    position: absolute;
+    left: 55.76%;
+    right: 36.81%;
+    top: 79%;
+    bottom: 1%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+#nav7 {
+    position: absolute;
+    left: 64.93%;
+    right: 27.64%;
+    top: 79%;
+    bottom: 1;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+/*Style de la page creation d'un utilisateur */
+#user-creation-form {
+    padding: 500px;
+}
+#user-creation-text {
+    position: absolute;
+    width: 177px;
+    height: 32px;
+    left: 52px;
+    top: 215px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+#user-creation-line {
+    position: absolute;
+    width: 92%;
+    height: 0px;
+    left: 4%;
+    right: 247px;
+    top: 250px;
+    border: 1px solid #EBE9E9;
+}
+
+.asterisk {
+    color: red;
+}
+
+.FormFirstname {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 286px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderFirstName {
+    position: absolute;
+    left: 320px;
+    top: 310px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormFirstname:valid ~ #placeholderFirstName {
+  display: none;
+}
+
+.FormLastname {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 400px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderLastName {
+    position: absolute;
+    left: 320px;
+    top: 424px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormLastname:valid ~ #placeholderLastName {
+  display: none;
+}
+
+.FormMail {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 514px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderMail {
+    position: absolute;
+    left: 320px;
+    top: 538px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormMail:valid ~ #placeholderMail {
+  display: none;
+}
+
+.FormPassword1 {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 628px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderPassword1 {
+    position: absolute;
+    left: 320px;
+    top: 652px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormPassword1:valid ~ #placeholderPassword1{
+  display: none;
+}
+
+.FormPassword2 {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 742px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderPassword2 {
+    position: absolute;
+    left: 320px;
+    top: 766px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormPassword2:valid ~ #placeholderPassword2{
+  display: none;
+}
+
+.FormPhone {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 856px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+.FormEventAddress[type="text"]::placeholder,
+.FormPhone[type="text"]::placeholder,
+.FormTeam[type="text"]::placeholder {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.FormAddress {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 970px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderAddress {
+    position: absolute;
+    left: 320px;
+    top: 994px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormAddress:valid ~ #placeholderAddress{
+  display: none;
+}
+
+.FormBilingual {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 1084px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderBilingual {
+    position: absolute;
+    left: 320px;
+    top: 1108px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormBilingual:valid ~ #placeholderBilingual{
+    display: none;
+  }
+
+.FormRole {
+    position: absolute;
+    width: 400px;
+    height: 69.34px;
+    left: 305px;
+    top: 1198px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderRole {
+    position: absolute;
+    left: 320px;
+    top: 1222px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormRole:valid ~ #placeholderRole{
+    display: none;
+  }
+
+.FormActivityType {
+    position: absolute;
+    width: 275px;
+    height: 69.34px;
+    left: 730px;
+    top: 1198px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+#placeholderActivityType {
+    position: absolute;
+    left: 745px;
+    top: 1222px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormActivityType:valid ~ #placeholderActivityType{
+    display: none;
+  }
+
+  .FormTeam {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 305px;
+    top: 1312px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+}
+
+.FormAddUser {
+    position: absolute;
+    width: 201px;
+    height: 47px;
+    left: 550px;
+    top: 1426px;
+    background: #FFBC40;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+/*Style de la page de profil Utilisateur */
+#fil-ariane {
+    position: absolute;
+    width: 300px;
+    height: 32px;
+    left: 52px;
+    top: 215px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+#profile-picture {
+    position: absolute;
+    width: 189px;
+    height: 189px;
+    left: 121px;
+    top: 50px;
+}
+
+#user-profile-navigation {
+    position: absolute;
+    width: 463px;
+    height: 1112px;
+    left: 0px;
+    top: 280px;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#coordinates-title {
+    position: absolute;
+    left: 530px;
+    width: 350px;
+    top: 300px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 31px;
+    color: #FFBC40;
+}
+
+#password-title {
+    position: absolute;
+    left: 530px;
+    width: 350px;
+    top: 600px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 31px;
+    color: #FFBC40;
+}
+
+#edit-mail {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 368px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+
+#edit-phoneNumber {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 448px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+
+#edit-address {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 528px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+
+#edit-oldPassword {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 667px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+#edit-oldPassword::placeholder {
+    position: absolute;
+    top: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#edit-newPassword {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 747px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+#edit-newPassword::placeholder {
+    position: absolute;
+    top: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#edit-confirmNewPassword {
+    position: absolute;
+    width: 587px;
+    height: 32px;
+    left: 593px;
+    top: 827px;
+    background: #F4F4F4;
+    border-radius: 3px;
+    border: none;
+}
+#edit-confirmNewPassword::placeholder {
+    position: absolute;
+    top: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#modification {
+    position: absolute;
+    width: 221px;
+    height: 36px;
+    left: 1021px;
+    top: 913px;
+    background: #FFBC40;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+}
+
+#profile-nametag {
+    position: absolute;
+    width: 332px;
+    height: 40px;
+    left: 56px;
+    top: 250px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    color: #000000;
+}
+
+#myInfoSelected {
+    position: absolute;
+    width: 398px;
+    height: 50px;
+    left: 17px;
+    top: 350px;
+}
+
+#myInvoices {
+    position: absolute;
+    width: 398px;
+    height: 50px;
+    left: 17px;
+    top: 400px;
+}
+
+#myInfo {
+    position: absolute;
+    width: 398px;
+    height: 50px;
+    left: 17px;
+    top: 350px;
+}
+
+#myInvoicesSelected {
+    position: absolute;
+    width: 398px;
+    height: 50px;
+    left: 17px;
+    top: 400px;
+}
+
+/*  Style de la page création événement*/
+#event-creation-text {
+    position: absolute;
+    width: 500px;
+    height: 32px;
+    left: 4.5%;
+    top: 215px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.FormName {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 20%;
+    top: 311px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+#placeholderName {
+    position: absolute;
+    width: 326px;
+    height: 32px;
+    left: 22%;
+    top: 340px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormName:valid ~ #placeholderName{
+    display: none;
+  }
+
+  .FormCustomer {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 20%;
+    top: 425px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+#placeholderCustomer {
+    position: absolute;
+    width: 326px;
+    height: 32px;
+    left: 22%;
+    top: 449px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormCustomer:valid ~ #placeholderCustomer{
+    display: none;
+  }
+
+.FormActivity {
+    position: absolute;
+    width: 450px;
+    height: 69.34px;
+    left: 20%;
+    top: 539px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+#placeholderActivity {
+    position: absolute;
+    width: 300px;
+    height: 15px;
+    left: 22%;
+    top: 563px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormActivity:valid ~ #placeholderActivity{
+    display: none;
+  }
+
+.FormRequiredUser {
+    position: absolute;
+    width: 230px;
+    height: 69.34px;
+    left: 56.5%;
+    top: 539px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+#placeholderRequiredUser {
+    position: absolute;
+    width: 175px;
+    height: 5px;
+    left: 56.5%;
+    top: 563px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.FormRequiredUser:valid ~ #placeholderRequiredUser{
+    display: none;
+  }
+
+.FormStartDate {
+    position: absolute;
+    width: 275px;
+    height: 69.34px;
+    left: 33.85%;
+    top: 653px;
+    background: #F4F4F4;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+}
+#placeholderStartDate {
+    position: absolute;
+    width: 175px;
+    height: 69.34px;
+    left: 20%;
+    top: 653px;
+    background: #F4F4F4;
+    border-radius: 15px 0px 0px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 20px 20px;
+    color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+#event_startDate {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+.FormDurationMinute {
+    position: absolute;
+    width: 230px;
+    height: 69.34px;
+    left: 56.5%;
+    top: 653px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+#placeholderDurationMinute {
+    position: absolute;
+    width: 200px;
+    height: 32px;
+    left: 61.5%;
+    top: 653px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#event_durationMinute{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #event_requiredUser{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+.FormEventAddress {
+    position: absolute;
+    width: 700px;
+    height: 69.34px;
+    left: 20%;
+    top: 767px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    border: none;
+}
+
+.FormAddEvent {
+    position: absolute;
+    width: 221px;
+    height: 36px;
+    left: 40%;
+    top: 913px;
+    background: #FFBC40;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+
+
+
+#NameGame {
+    position: absolute;
+    width: 1000px;
+    height: 66px;
+    left: 35%;
+    top: 256px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+
+color: #000000;
+}
+
+#EventPhoto {
+position: absolute;
+width: 588px;
+height: 377px;
+left: 18%;
+top: 500px;
+}
+
+#Tresor {
+    width: 588px;
+}
+
+#EventActivite {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 55%;
+    top: 550px;
+    
+    font-family: 'Quicksand';
+    font-style: normal ;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    
+}
+
+#EventActiviteName {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 62%;
+    top: 550px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: rgba(0, 0, 0, 0.7);
+    
+}
+
+#EventEntreprise {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 55%;
+    top: 585px;
+    
+    font-family: 'Quicksand';
+    font-style: normal ;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    
+}
+
+#EventEntrepriseName {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 64%;
+    top: 585px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    
+     color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+#NameGame {
+    position: absolute;
+    width: 1000px;
+    height: 66px;
+    left: 35%;
+    top: 256px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+
+color: #000000;
+}
+
+#EventPhoto {
+position: absolute;
+width: 588px;
+height: 377px;
+left: 18%;
+top: 500px;
+}
+
+#Tresor {
+    width: 588px;
+}
+
+#EventActivite {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 55%;
+    top: 550px;
+    
+    font-family: 'Quicksand';
+    font-style: normal ;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    
+}
+
+#EventActiviteName {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 62%;
+    top: 550px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: rgba(0, 0, 0, 0.7);
+    
+}
+
+#EventEntreprise {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 55%;
+    top: 585px;
+    
+    font-family: 'Quicksand';
+    font-style: normal ;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    
+}
+
+#EventEntrepriseName {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 64%;
+    top: 585px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    
+     color: rgba(0, 0, 0, 0.7);
+}
+
+#logoTaille {
+    width: 30px;
+
+}
+
+#micro {
+    position: absolute;
+    left: 55%;
+    top: 640px;
+}
+
+#nbanim {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 57%;
+top: 645px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+
+}
+
+#nbanim2 {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 58%;
+top: 645px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+
+}
+
+#calendrier {
+    position: absolute;
+    left: 55%;
+    top: 680px;
+}
+
+#eventdate {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 57%;
+top: 685px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+}
+
+#horloge {
+    position: absolute;
+    left: 55%;
+    top: 720px;
+}
+
+#duration {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 57%;
+top: 725px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+}
+
+#duramin {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 59%;
+top: 725px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+}
+
+#emplacement {
+    position: absolute;
+    left: 55%;
+    top: 760px;
+}
+
+#eventaddress {
+    position: absolute;
+width: 394px;
+height: 37px;
+left: 57%;
+top: 765px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 20px;
+
+color: #000000;
+}
+
+
+#binplacement {
+    position: absolute;
+    width: 588px;
+    height: 377px;
+    left: 70%;
+    top: 828px;
+    }
+
+
+#eventmodification {
+    position: absolute;
+width: 142px;
+height: 33px;
+left: 62%;
+top: 825px;
+
+background: #FFBC40;
+border-radius: 30px;
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+color: #FFFFFF;
+border: none;
+}
+
+/* espacement */
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(233, 233, 233, 0.25);
+}
+
+table {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+  }
+  th, td { 
+    padding: 20px;
+  }
+
+  td {
+    color: #7C7C7C;
+  }
+
+  .espace {
+      width: 249%;
+      align-items: center;
+  }
+
+#eventimg {
+    width: 30px;
+    margin-right: 2%;
+}
+
+thead {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    
+    color: #000000; 
+}
+
+
+#eventlistdetail {
+left: 30%;
+top: 1100px;
+width: 60%;
+}
+
+#bin {
+width: 25px;
+}
+
+#eventmodification2 {
+    position: absolute;
+width: 142px;
+height: 33px;
+left: 87%;
+top: 270px;
+
+background: #FFBC40;
+border-radius: 30px;
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+color: #FFFFFF;
+border: none;
+}

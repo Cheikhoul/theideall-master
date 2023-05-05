@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+
+<div class="breadcrumbs">
+    <p id="fil-ariane"> Evénements </p>
+    <hr id="user-creation-line">
+</div>
+
+
+
+<table>
+  <thead>
+    <tr >
+      <th scope="col">NOM</th>
+      <th scope="col">PRENOM</th>
+      <th scope="col">COURRIEL</th>
+      <th scope="col">TYPE D'ACTIVITE</th>
+      <th scope="col">LAngue</th>
+      <th scope="col">STATUT</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for user in users %}
+    <tr>
+      <td> {{user.lastname}} </td>
+      <td> {{user.firstname}} </td>
+      <td>{{user.email}}</td>
+      <td> {% if  user.activityType == "physical" %} <img id="eventimg" src="{{ asset('build/images/physique.png')}}">  {% else %} <img id="eventimg" src="{{ asset('build/images/virtuel.png')}}"> {% endif %}</td>
+      <td>{% if user.bilingual  %}  
+        <img id="eventimg" src="{{ asset('build/images/francais.png')}}"> 
+      {% else %} 
+        <img id="eventimg" src="{{ asset('build/images/anglais.png')}}"> {% endif %} </td>
+      <td> {% if  user.status %} Actif {% else %} Inactif {% endif %}</td>
+      <td> 
+      <a href="{{ path('user-delete', {'id':user.id}) }}" > <img id="eventimg" src="{{ asset('build/images/binblack.png')}}"></a>
+      <a href="{{ path('user-detail', {'id':user.id}) }}" ><img id="eventimg" src="{{ asset('build/images/aller.png')}}"></a> 
+      </td>
+    </tr>
+    {% endfor %}
+  </tfoot>
+</table>
+
+<a href="{{ path('user-add') }}"> <input class="btn-submit" type="submit" id="eventmodification2" name="edit" value="Créer un utilisateur" tabindex="7"/> <a/>
+
+    
+{% endblock %}
+
+{% block javascripts %} {{ parent() }} {% endblock %}

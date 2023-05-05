@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<div class="breadcrumbs">
+    <p id="fil-ariane"> Evénements </p>
+    <hr id="user-creation-line">
+</div>
+
+
+
+<table>
+  <thead>
+    <tr >
+      <th scope="col">DATE</th>
+      <th scope="col">NOM ENTREPRISE</th>
+      <th scope="col">ACTIVITÉ</th>
+      <th scope="col">TYPE</th>
+      <th scope="col">LANGUE</th>
+      <th scope="col">ANIMATEURS</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for event in events %}
+    <tr>
+      <td> {{event.startDate|date('d-m-Y H:i')}}</td>
+      <td> {{event.customer}} </td>
+      <td>{{event.name}}</td>
+      <td> {% if  event.activity.activityType == "physical" %} <img id="eventimg" src="{{ asset('build/images/physique.png')}}">  {% else %} Virtuel {% endif %}</td>
+      <td>{% if event.language == "french" %}  
+        <img id="eventimg" src="{{ asset('build/images/francais.png')}}"> 
+      {% else %} 
+        <img id="eventimg" src="{{ asset('build/images/anglais.png')}}"> {% endif %} </td>
+      <td>
+      {# Permet d'afficher animateurs requis (on double le for pour afficher dans le bon sens (methode bourrin) #}
+      {% for i in 1..event.requiredUser %} {% if i <= eventAccepted[event.id] %}  
+      {% else %} <img id="eventimg" src="{{ asset('build/images/requi.png')}}"> {% endif %} {% endfor %}
+
+      {% for i in 1..event.requiredUser %} {% if i <= eventAccepted[event.id] %} <img id="eventimg" src="{{ asset('build/images/valide.png')}}"> 
+      {% else %}  {% endif %} {% endfor %}
+      </td>
+      <td> 
+      {% if  user.roles[0]=='ROLE_ADMIN' %} <a href="{{ path('event-delete', {'id':event.id}) }}" > <img id="eventimg" src="{{ asset('build/images/binblack.png')}}"></a>
+      {% if eventPending[event.id] %}
+      <img id="eventimg" src="{{ asset('build/images/clochenotif.png')}}"> 
+      {% else %}
+      <img id="eventimg" src="{{ asset('build/images/cloche.png')}}">
+      {% endif %}
+      <a href="{{ path('event-detail', {'id':event.id}) }}" ><img id="eventimg" src="{{ asset('build/images/aller.png')}}"></a> 
+      {% else %}
+      <a href="{{ path('event-registration', {'id':event.id, 'user':user.id}) }}" > <input class="btn-submit" type="submit" id="" name="registration" value="S'inscrire" tabindex="7"/></a>
+      <a href="{{ path('event-detail', {'id':event.id}) }}"> <img id="eventimg" src="{{ asset('build/images/arrow.png')}}"></a>
+       {% endif %}
+      
+      </td>
+    </tr>
+    {% endfor %}
+  </tfoot>
+</table>
+
+<a href="{{ path('event-add') }}"> <input class="btn-submit" type="submit" id="eventmodification2" name="edit" value="Creer événement" tabindex="7"/> <a/>
+
+
+
+
+
+{% endblock %}
+
+
+{% block javascripts %} {{ parent() }} {% endblock %}
+

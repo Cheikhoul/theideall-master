@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block body %}
+
+
+<div class="breadcrumbs">
+    <p id="fil-ariane">Mon profil > {{event.name}} {{event.customer}} </p>
+    <hr id="user-creation-line">
+</div>
+
+    
+
+    
+    <div id="NameGame" > <h1> {{ event.name }} </h1> 
+    </div>
+
+    
+    <div id="EventPhoto" >
+        <img id="Tresor" src="{{ asset('build/images/CarteTrésor.jpg') }}"\>
+    </div>
+
+    <div>
+        <span id="EventActivite">Activité : </span>
+        <span id="EventActiviteName"> {{event.customer}} </span>
+    </div>
+
+    <div>
+        <span id="EventEntreprise">Entreprise : </span>
+        <span id="EventEntrepriseName"> {{event.customer}} </span>
+    </div>
+
+    <div>
+        <div id="micro" >
+            <img id="logoTaille" src="{{ asset('build/images/Micro.png') }}"\>
+        </div>
+        <div id="nbanim"> {{event.requiredUser}} </div>
+        <span id="nbanim2">animateur nécessaires </span>
+    </div
+    
+    <div>
+        <div id="calendrier" >
+            <img id="logoTaille" src="{{ asset('build/images/calendrier.png') }}"\>
+        </div>
+        <span id="eventdate" > {{event.startDate|date('d-m-Y H:i')}} </span>
+    </div>
+
+    <div>
+        <div id="horloge" >
+            <img id="logoTaille" src="{{ asset('build/images/horloge.png') }}"\>
+        </div>
+        <span id="duration" > {{event.durationMinute}} </span>
+        <span id="duramin"> minutes </span>
+    </div>
+
+    <div>
+        <div id="emplacement" >
+          <img id="logoTaille" src="{{ asset('build/images/emplacement.png') }}"\>
+        </div>
+        <span id="eventaddress" > {{event.address}} </span>
+    </div>
+
+
+{% if  user.roles[0]=='ROLE_ADMIN' %} <div id="binplacement" > 
+        <a href="{{ path('event-delete', {'id':event.id}) }}" > <img id="bin" src="{{ asset('build/images/bin.png') }}"\>  </a>
+    </div>
+
+    <input class="btn-submit" type="submit" id="eventmodification" name="edit" value="Modifier" tabindex="7"/>
+
+    <table id="eventlistdetail">
+  <thead>
+    <tr >
+      <th scope="col">ANIMATEUR</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  {% for user in userPending %}
+    <tr>
+      <td> {{ user.firstname ~ ' ' ~ user.lastname}} </td>
+      <td> 
+      <a href="{{ path('event-validation', {'id':event.id, 'user':user.id}) }}">  <img id="logoTaille"  src="{{ asset('build/images/valide2.png') }}"\></a> 
+      <a href="{{ path('event-rejection', {'id':event.id, 'user':user.id}) }}"> <img id="logoTaille"  src="{{ asset('build/images/croix.png') }}"\>
+      </td>
+    </tr>
+    {% endfor %}
+
+     {% for user in userAccepted %}
+    <tr>
+      <td style="color: green"> {{ user.firstname ~ ' ' ~ user.lastname}} </td>
+
+      <td> <a href="{{ path('event-rejection', {'id':event.id, 'user':user.id}) }}"> <img id="logoTaille"  src="{{ asset('build/images/croix.png') }}"\> </a></td>
+    </tr>
+    {% endfor %}
+  </tfoot>
+</table>
+ {% else %}
+ {% endif %}
+
+
+
+
+
+    
+{% endblock %}

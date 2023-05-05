@@ -1,0 +1,19 @@
+<header>
+    <div id="header-container">
+        <div>
+            <a href="{{ path('index') }}"><img src="{{ asset('build/images/logo_IdeAllHeader.png') }}" id="header-logo"/></a>
+        </div>  
+        <nav class="navigation">
+            <ul style="list-style-type:none">
+            <li><a id="nav1" href="{{ path('user-profile-info')}}" style="text-decoration: none">Mon profil</a></li> 
+            <li><a href="{{ path('logout')}}" style="text-decoration: none"><img src="{{ asset('build/images/deconnexion.png') }}" id="nav2"></a></li>  
+            <li><a id="nav3" href="{{ path('index') }}" style="text-decoration: none">Accueil</a></li>  
+            <li><a id="nav4" href="{{ path('event-list') }}" style="text-decoration: none">Événements</a></li>  
+            <li><a id="nav5" href="{{ path('user-list')}}" style="text-decoration: none">Animateurs</a></li>  
+            <li><a id="nav6" href="#" style="text-decoration: none">Formations</a></li>
+            <li><a id="nav7" href="#" style="text-decoration: none">Factures</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div>
+        <p id="event-creation-text">Évenement > Création d'un événement</p>
+        <hr id="user-creation-line">
+    </div>
+
+    <div id="event-creation-form">
+        {{ form_start(form) }}
+        {{ form_widget(form.name,{ 'attr': {'class': 'FormName', 'required':'required'} }) }}
+        <span id="placeholderName">Nom de l'événement <span class="asterisk">*</span></span>
+        {{ form_widget(form.customer,{ 'attr': {'class': 'FormCustomer','required':'required'}}) }}
+        <span id="placeholderCustomer"> Nom de l'entreprise <span class="asterisk">*</span></span>
+        {{ form_widget(form.activity, { 'attr': {'class': 'FormActivity', 'required':'required'} }) }}
+        <span id="placeholderActivity">Selectionner un jeu <span class="asterisk">*</span></span>
+        {{ form_widget(form.requiredUser,{ 'attr': {'class': 'FormRequiredUser', 'required':'required'} }) }}
+        <span id="placeholderRequiredUser">Animateur(s) requis <span class="asterisk">*</span></span>
+        {{ form_widget(form.startDate,{ 'attr': {'class': 'FormStartDate','required':'required'} }) }} 
+        <span id="placeholderStartDate">Date de début <span class="asterisk">*</span></span>
+        {{ form_widget(form.durationMinute, { 'attr': {'class': 'FormDurationMinute', 'required':'required'}}) }}
+        <span id="placeholderDurationMinute"> Durée (minutes) <span class="asterisk">*</span></span>
+        {{ form_widget(form.address,{ 'attr': {'class': 'FormEventAddress', 'placeholder':'Adresse'}}) }}
+        <button class="FormAddEvent"> {{ button_label|default('Ajouter l\'événement')}} </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+
+{% block javascripts %} {{ parent() }} {% endblock %}

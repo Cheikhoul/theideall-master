@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %} {{ parent() }} {% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <div id="login-container">
+        <div id="login-container-inner">
+        <header id="login-logo">
+        <img src="{{ asset('build/images/logo_IdeAll.png') }}">
+        </header>
+            <div id="login-content"> 
+                <div class="box" id="login">                    
+                    <form id="form1" action="{{ path('login') }}" method="post">
+                        <section class="row">
+                            <label for="username" id="idEmail">
+                                <span class="accessKey">Identifiant</span>
+                            </label>
+                            <input type="text" id="username" name="_username" class="required" value="{{ last_username }}" autocomplete="off" tabindex="1" value size="25"/>
+                        </section>
+                        <section class="row">
+                            <label for="password" id="idMdp">
+                                <span class="accessKey">Mot de passe</span>
+                            </label>
+                            <input type="password" id="password" name="_password" class="required" tabindex="2" acceskey="m" value size="25" autocomplete="off"/>
+                        </section>
+                        <section class="row btn-row">
+                            <label id="remember_me">
+                                <input type="checkbox" name="_remember_me" unchecked/>
+                                Se souvenir de moi
+                            </label>
+                            <input class="btn-submit" id="connexion" name="submit" accesskey="l" value="Se Connecter" tabindex="4" type="submit">
+                        </section>
+
+                        {# If you want to control the URL the user is redirected to on success
+                        <input type="hidden" name="_target_path" value="/account"/> #}                        
+                    </form>
+                    <div id="forgotten_password">
+                        <a href="">Mot de passe oublié?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %} {{ parent() }} {% endblock %}
